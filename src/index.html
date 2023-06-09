@@ -62,7 +62,7 @@
 			--bs-success: #198754;
 			--bs-info: #0dcaf0;
 			--bs-warning: #ffc107;
-			--bs-danger: #C61526;
+			--bs-danger: #dc3545;
 			--bs-light: #f8f9fa;
 			--bs-dark: #212529;
 			--bs-primary-rgb: 13, 110, 253;
@@ -97,7 +97,7 @@
 			--bs-border-radius-2xl: 2rem;
 			--bs-border-radius-pill: 50rem;
 			--bs-heading-color: ;
-			--bs-link-color: #C61526;
+			--bs-link-color: #dc3545;
 			--bs-link-hover-color: #0a58ca;
 			--bs-code-color: #d63384;
 			--bs-highlight-bg: #fff3cd;
@@ -130,7 +130,7 @@
 		}
 
 		.bg-black {
-			background-color: black;
+			background-color: var(--bs-black);
 		}
 
 		.card-footer {
@@ -139,6 +139,31 @@
 			background-color: var(--bs-card-bg);
 			border-top: none;
 			margin-bottom: 1rem;
+		}
+
+		.key-people-item img {
+			transition:all .5s ease-in-out;
+		}
+		.key-people-item p {
+			transition-delay: .5s;
+		}
+		
+		.key-people-item.active p {
+			transition-delay: 0s;
+			visibility: hidden;
+		}
+
+		.key-people-item.active img {
+			transform: translate(0, 50px);
+		}
+
+		.key-people-item.active:after {
+			background-image: url('assets/img/icons/caret-down-solid.svg');
+			background-size: 20px 40px;
+			display: inline-block;
+			width: 20px;
+			height: 40px;
+			content: "";
 		}
 	</style>
 </head>
@@ -515,46 +540,51 @@
 						<p>Meet the key people who have chosen to make a career at NMG. They are responsible for
 							creating <br> a culture that retains outstanding people. </p>
 					</div>
-					<div class="list-group mb-3" id="list-tab" role="tablist">
+					<div class="list-group mb-2" id="list-tab" role="tablist">
 						<div class="row">
-							<div class="col-md text-center active" id="list-Geoff-Baars-list" data-bs-toggle="list"
-								href="#list-Geoff-Baars" role="tab" aria-controls="list-Geoff-Baars">
+							<div class="key-people-item col-md text-center active" id="list-Geoff-Baars-list"
+								data-bs-toggle="list" href="#list-Geoff-Baars" role="tab"
+								aria-controls="list-Geoff-Baars">
 								<img class="rounded-5 border border-white border-3 shadow-sm mb-2"
 									src="assets/img/people/Geoff-Baars-e1405584015351.jpg" alt=""
 									style="width: 100px; height: 100px">
 								<p class="m-0 fw-bold">Geoff Baars</p>
-								<p class="text-muted">Executive Director, NMG Group</p>
+								<p class="text-muted mb-0">Executive Director, NMG Group</p>
 							</div>
-							<div class="col-md text-center" id="list-Mark-Prichard-list" data-bs-toggle="list"
-								href="#list-Mark-Prichard" role="tab" aria-controls="list-Mark-Prichard">
+							<div class="key-people-item col-md text-center" id="list-Mark-Prichard-list"
+								data-bs-toggle="list" href="#list-Mark-Prichard" role="tab"
+								aria-controls="list-Mark-Prichard">
 								<img class="rounded-5 border border-white border-3 shadow-sm mb-2"
 									src="assets/img/people/Mark-Prichard-e1405584354538.jpg" alt=""
 									style="width: 100px; height: 100px">
 								<p class="m-0 fw-bold">Mark Prichard</p>
-								<p class="text-muted">CEO, NMG Consulting</p>
+								<p class="text-muted mb-0">CEO, NMG Consulting</p>
 							</div>
-							<div class="col-md text-center" id="list-David-Burns-list" data-bs-toggle="list"
-								href="#list-David-Burns" role="tab" aria-controls="list-David-Burns">
+							<div class="key-people-item col-md text-center" id="list-David-Burns-list"
+								data-bs-toggle="list" href="#list-David-Burns" role="tab"
+								aria-controls="list-David-Burns">
 								<img class="rounded-5 border border-white border-3 shadow-sm mb-2"
 									src="assets/img/people/David-Burns-2.2.jpg" alt=""
 									style="width: 100px; height: 100px">
 								<p class="m-0 fw-bold">David Burns</p>
-								<p class="text-muted">Director, NMG Group</p>
+								<p class="text-muted mb-0">Director, NMG Group</p>
 							</div>
-							<div class="col-md text-center" id="list-Hamish-Worsley-list" data-bs-toggle="list"
-								href="#list-Hamish-Worsley" role="tab" aria-controls="list-Hamish-Worsley">
+							<div class="key-people-item col-md text-center" id="list-Hamish-Worsley-list"
+								data-bs-toggle="list" href="#list-Hamish-Worsley" role="tab"
+								aria-controls="list-Hamish-Worsley">
 								<img class="rounded-5 border border-white border-3 shadow-sm mb-2"
 									src="assets/img/people/Hamish_Worsley-2.jpg" alt=""
 									style="width: 100px; height: 100px">
 								<p class="m-0 fw-bold">Hamish Worsley</p>
-								<p class="text-muted">Partner, NMG Consulting</p>
+								<p class="text-muted mb-0">Partner, NMG Consulting</p>
 							</div>
-							<div class="col-md text-center" id="list-Andrew-Baker-list" data-bs-toggle="list"
-								href="#list-Andrew-Baker" role="tab" aria-controls="list-Andrew-Baker">
+							<div class="key-people-item col-md text-center" id="list-Andrew-Baker-list"
+								data-bs-toggle="list" href="#list-Andrew-Baker" role="tab"
+								aria-controls="list-Andrew-Baker">
 								<img class="rounded-5 border border-white border-3 shadow-sm mb-2"
 									src="assets/img/people/Andrew-Baker.jpg" alt="" style="width: 100px; height: 100px">
 								<p class="m-0 fw-bold">Andrew Baker</p>
-								<p class="text-muted">Partner, NMG Consulting</p>
+								<p class="text-muted mb-0">Partner, NMG Consulting</p>
 							</div>
 						</div>
 					</div>
