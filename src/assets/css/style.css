@@ -78,11 +78,8 @@
     --bs-offcanvas-height: 30vh;
     --bs-offcanvas-padding-x: 1rem;
     --bs-offcanvas-padding-y: 1rem;
-    --bs-offcanvas-color: ;
-    --bs-offcanvas-bg: #fff;
     --bs-offcanvas-border-width: 1px;
     --bs-offcanvas-border-color: var(--bs-border-color-translucent);
-    --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.175);
 }
 
 * {
@@ -92,10 +89,6 @@
 
 body {
     overflow-x: hidden;
-}
-
-.bg-black {
-    background-color: var(--bs-black);
 }
 
 .card-footer {
