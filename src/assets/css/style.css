@@ -117,7 +117,7 @@ body {
 }
 
 .key-people-item.active:after {
-    background-image: url('assets/img/icons/caret-down-solid.svg');
+    background-image: url('../img/icons/caret-down-solid.svg');
     background-size: 20px 40px;
     display: inline-block;
     width: 20px;
